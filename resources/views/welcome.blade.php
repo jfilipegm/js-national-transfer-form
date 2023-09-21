@@ -15,4 +15,5 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    {{-- fake stuff for initial commit --}}
 </x-app-layout>
