@@ -4,8 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
-
+        <title>Asseco FrontEnd Challenge</title>
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -17,7 +16,7 @@
         @vite(['resources/js/app.js', 'resources/sass/app.scss'])
         <link rel="stylesheet" href="{{ asset('public/build/assets/app.css') }}">
     </head>
-    <body class="antialiased">
+    <body class="container border-primary">
        {{$slot}}
     </body>
 </html>
