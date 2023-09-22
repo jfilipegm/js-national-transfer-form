@@ -1,3 +1,3 @@
 <x-app-layout>
-  @livewire('form')
+  @livewire('summary')
 </x-app-layout>

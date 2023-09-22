@@ -1,7 +1,8 @@
 <div class="row">
     <div class="col-12">
         @livewire('header')
-        <form class="py-3">
+        <form method="POST" id="assecoForm" class="py-3">
+            @csrf
             <div class="row">
                 <div class="col-12 col-sm-5">
                     <label for="originAccount" class="form-label">Origin Account</label>
@@ -41,7 +42,7 @@
             </div>
             <div class="row flex-column min-vh-30">
                 <div class="col-12 col-sm-3 mt-auto">
-                    <button type="submit" class="btn btn-primary">Next Step</button>
+                    <button id="nextStepBtn" type="submit" class="btn btn-primary">Next Step</button>
                 </div>
             </div>
         </form>

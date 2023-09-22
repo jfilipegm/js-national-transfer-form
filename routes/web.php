@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/* Route::post('/summary', function () {
+    return view('summary');
+}); */
+
+Route::get('/summary', \App\Livewire\Summary::class);
