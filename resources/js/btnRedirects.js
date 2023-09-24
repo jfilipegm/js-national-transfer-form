@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (confirmButton) {
         confirmButton.addEventListener('click', function () {
-            // Redirect to a different page
-            window.location.href = '/'; // Success page (tbd)
+            window.location.href = '/'; // Returns to welcome page
         });
     }
 });

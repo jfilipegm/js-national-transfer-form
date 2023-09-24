@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('header', ['step' =>  $summary['step'], 'description' =>  $summary['description']])
+@include('header', ['step' =>  $summary['step'], 'stepCircle' => $summary['stepCircle'], 'description' =>  $summary['description']])
 <div class="row p-3">
     <div class="col-12">
         <div class="row">

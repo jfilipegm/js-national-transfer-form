@@ -1,4 +1,6 @@
 const nextStepButton = document.getElementById('nextStepBtn');
+const progressBar = document.getElementById('progress-bar');
+const progressBarFull = document.getElementById('progress-bar-full');
 
 if (nextStepButton) {
     nextStepButton.addEventListener('click', function (e) {
@@ -29,24 +31,16 @@ if (nextStepButton) {
                 credentials: 'same-origin',
                 body: JSON.stringify(formData)
             })
-                .then(response => {
-                    if (response.ok) {
-                        window.location.href = '/summary';
-                    } else { //debug
-                        console.error('Error sending data');
-                        console.log(formData);
-                        console.log(response);
-                        console.log(token);
-                    }
-                })
-                .then(data => { //debug
-                    if (typeof data === 'object') {
-                        console.log('Data sent successfully');
-                        console.log(data);
-                    } else {
-                        console.error('Invalid JSON response:', data);
-                    }
-                });
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = '/summary';
+                } else { //debug
+                    console.error('Error sending data');
+                    console.log(formData);
+                    console.log(response);
+                    console.log(token);
+                }
+            })
         } else {
             window.alert('Form is not valid. Please fill in all required fields.');
         }

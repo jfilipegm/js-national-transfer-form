@@ -13,7 +13,8 @@ class HandleFormController
             'transferDescription' => $request->input('transferDescription'),
             'amount' => $request->input('amount'),
             'description' => 'Summary',
-            'step' => 2
+            'step' => 2,
+            'stepCircle' => 'progress-bar-full'
         ];
     
         session(['summary' => $summary]);

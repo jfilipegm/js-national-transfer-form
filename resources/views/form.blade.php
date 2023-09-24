@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-12">
-        @include('header', ['step' => '1', 'description' => 'Information'])
+        @include('header', ['step' => '1', 'stepCircle' => 'progress-bar', 'description' => 'Information'])
         <form method="POST" action="{{route('getFormData')}}" id="assecoForm" class="p-3">
             @csrf
             <div class="row mb-3">
@@ -18,7 +18,7 @@
                 <div class="col-12 col-sm-5">
                     <div class="mb-3">
                         <label for="destinationIban" class="form-label">Destination IBAN</label>
-                        <input type="text" class="form-control" id="destinationIban" placeholder="PT500..." required>
+                        <input type="text" class="form-control" id="destinationIban" placeholder="PT50 xxxx xxxx xxxx xxxx xxxx x" required>
                     </div>
                 </div>
             </div>
