@@ -1,7 +1,7 @@
 # asseco-frontend-challenge
 O objetivo do Challenge assenta em desenvolver uma página web simples, em JavaScript, com um formulário para simular uma transferência nacional.
 
-#Stack Used
+##### Stack Used #####
 
 Laravel (PHP)
 
@@ -12,8 +12,9 @@ Javascript
 
 
 Vite (para os styles/scripts)
+######################
 
-#To run the project
+##### To run the project #####
 
 
 Git clone directly to IDE
@@ -35,7 +36,7 @@ open new terminal
 
 php artisan serve
 
-#After the first run
+##### After the first run #####
 
 
 npm run dev (this will run the styles and scripts)
@@ -43,3 +44,5 @@ npm run dev (this will run the styles and scripts)
 open new terminal
 
 php artisan serve (this will open the server 127.0.0.1:8000)
+######################
+######################
