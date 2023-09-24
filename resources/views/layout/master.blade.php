@@ -13,6 +13,5 @@
     </head>
     <body class="container border-primary">
         @yield('content')
-        {{-- @include('form') --}}
     </body>
 </html>

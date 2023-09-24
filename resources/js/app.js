@@ -1,2 +1,4 @@
 import './bootstrap';
-import './index';
+import './formSubmit';
+import './btnRedirects';
+import './ibanInput';

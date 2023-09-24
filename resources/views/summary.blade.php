@@ -1,14 +1,47 @@
 @extends('layout.master')
+
 @section('content')
 
-{{-- @if(session()->get('summary')) --}}
-{{-- @dd(session()->get('summary')[0]['originAccount']) --}}
-
-{{-- @dd('chegou aqui', session()->get('summary'),  $sum, $sum['originAccount']) --}}
-<div class="">
-    <p>{{session()->get('summary')[0]['originAccount']}}</p>
-    <p>{{session()->get('summary')[0]['destinationIban']}}</p>
-    <p>{{session()->get('summary')[0]['transferDescription']}}</p>
-    <p>{{session()->get('summary')[0]['amount']}}</p>
+@include('header', ['step' =>  $summary['step'], 'stepCircle' => $summary['stepCircle'], 'description' =>  $summary['description']])
+<div class="row p-3">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12 col-sm-5">
+                <h6>
+                    Origin Account
+                </h6>
+                <p>{{ $summary['originAccount'] }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-5">
+                <h6>
+                    Destination IBAN
+                </h6>
+                <p> {{ $summary['destinationIban'] }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <h6>
+                    Transfer Description
+                </h6>
+                <p>{{ $summary['transferDescription'] }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-2">
+                <h6>
+                    Amount 
+                </h6>
+                <p>{{ $summary['amount'] }}</p>
+            </div>
+        </div>
+        <div class="row flex-column min-vh-30">
+            <div class="col-12 mt-auto">
+                <button id="backBtn" type="submit" class="btns back-btn">Back</button>
+                <button id="confirmBtn" type="submit" class="btns next-step-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
 </div>
-{{-- @endif --}}
