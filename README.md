@@ -1,10 +1,16 @@
 # asseco-frontend-challenge
 O objetivo do Challenge assenta em desenvolver uma página web simples, em JavaScript, com um formulário para simular uma transferência nacional.
 
-# Stack 
+#Stack Used
+
 Laravel (PHP)
+
 Scss
+
+
 Javascript
+
+
 Vite (para os styles/scripts)
 
 #To run the project
