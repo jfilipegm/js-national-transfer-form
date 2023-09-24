@@ -25,6 +25,12 @@ Route::post('/getFormData',[
     'uses' => 'HandleFormController@handleForm'
 ]);
 
-Route::get('/summary', function () {
+/* Route::get('/summary', function () {
     return view('summary');
+})->name('summary');
+ */
+
+Route::get('/summary', function () {
+    $summary = session('summary', []);
+    return view('summary', ['summary' => $summary]);
 })->name('summary');
