@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SummaryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/* Route::post('/summary', function () {
-    return view('summary');
-}); */
+/* Route::post('summary', 'HandleFormController@handleForm'); */
 
-Route::get('/summary', \App\Livewire\Summary::class);
+Route::post('/getFormData',[
+    'as' => 'getFormData',
+    'uses' => 'HandleFormController@handleForm'
+]);
+
+Route::get('/summary', function () {
+    return view('summary');
+})->name('summary');

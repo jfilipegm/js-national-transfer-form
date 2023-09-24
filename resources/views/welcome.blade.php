@@ -1,3 +1,4 @@
-<x-app-layout>
-  @livewire('form')
-</x-app-layout>
+@extends('layout.master')
+@section('content')
+
+@include('form')

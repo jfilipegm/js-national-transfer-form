@@ -1,43 +1,49 @@
 const nextStepButton = document.getElementById('nextStepBtn');
 
-    // Add a click event listener to the button
-    nextStepButton.addEventListener('click', function() {
-        // Extract information from form inputs
+if(nextStepButton) {
+    nextStepButton.addEventListener('click', function(e) {
+        e.preventDefault();
+    
         const originAccount = document.getElementById('originAccount').value;
         const destinationIban = document.getElementById('destinationIban').value;
         const transferDescription = document.getElementById('transferDescription').value;
         const amount = document.getElementById('amount').value;
-
-        // Create a JavaScript object with the extracted data
+        const token = document.querySelector('[name="_token"]').value;
+    
         const formData = {
             originAccount,
             destinationIban,
             transferDescription,
             amount
         };
-
-        console.log(formData)
-        // Send the data to another route using Fetch API
-        fetch('/summary', {
+    
+        fetch('getFormData', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                'Content-Type': 'application/json', // Set the content type to JSON
+                'X-CSRF-TOKEN': token
             },
+            credentials: 'same-origin',
             body: JSON.stringify(formData)
         })
-        .then(response => {
-            // Handle the response here (e.g., show a success message)
+        .then (response => {
             if (response.ok) {
-                // Success, do something
-                console.log('Data sent successfully');
+               window.location.href = '/summary'
             } else {
-                // Error, handle accordingly
                 console.error('Error sending data');
+                console.log(formData);
+                console.log(response);
+                console.log(token);
             }
         })
-        .catch(error => {
-            // Handle any network or request errors here
-            console.error('Request error:', error);
-        });
+        .then (data => {
+            // Handle the success response or data from the server
+            if (typeof data === 'object') {
+                console.log('Data sent successfully');
+                console.log(data);
+            } else {
+                console.error('Invalid JSON response:', data);
+            }
+        })
     });
+}

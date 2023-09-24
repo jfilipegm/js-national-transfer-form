@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12">
-        @livewire('header')
-        <form method="POST" id="assecoForm" class="py-3">
+        @include('header')
+        <form method="POST" action="{{route('getFormData')}}" id="assecoForm" class="py-3">
             @csrf
             <div class="row">
                 <div class="col-12 col-sm-5">
