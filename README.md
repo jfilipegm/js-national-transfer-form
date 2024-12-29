@@ -1,48 +1,72 @@
-# Exemplo de formulário
-O objetivo do Challenge assenta em desenvolver uma página web simples, em JavaScript, com um formulário para simular uma transferência nacional.
+# Exemplo de Formulário
 
-##### Stack Used #####
+O objetivo deste challenge é desenvolver uma página web simples em JavaScript, com um formulário para simular uma transferência nacional.
 
-Laravel (PHP)
+---
 
-Scss
+## 🛠️ Stack Utilizada
 
+- **Laravel (PHP)**
+- **Scss**
+- **JavaScript**
+- **Vite** (para os styles/scripts)
 
-Javascript
+---
 
+## 🚀 Como Executar o Projeto
 
-Vite (para os styles/scripts)
-######################
+### 1. Clonar o repositório
 
-##### To run the project #####
-
-
-Git clone directly to IDE
-
-
+Clone o projeto diretamente para sua IDE:
+```
+git clone https://github.com/jfilipegm/js-national-transfer-form
+```
+### 2. Instalar dependências do PHP
+```
 composer install
+```
 
-
+### 3. Instalar dependências do Node.js
+```
 npm install
+```
 
-
+### 4. Construir os assets para produção
+```
 npm run build
+```
 
-
+### 5. Iniciar o servidor de desenvolvimento
+```
 npm run dev
+```
 
-open new terminal
-
-
+Abra um novo terminal e inicie o servidor PHP:
+```
 php artisan serve
+```
 
-##### After the first run #####
+## ▶️ Após a Primeira Execução
 
+### 1. Correr styles
+```
+npm run dev
+```
+### 2. Iniciar o servidor
+```
+php artisan serve
+```
+**Servidor irá estar disponível em 127.0.0.1:8000**
 
-npm run dev (this will run the styles and scripts)
+## 📚 Notas Adicionais
+Certifique-se de ter as dependências necessárias instaladas:
 
-open new terminal
+- Composer
+- Node.js (com npm ou yarn)
+- PHP
+- Utilize navegadores modernos para a melhor experiência.
 
-php artisan serve (this will open the server 127.0.0.1:8000)
-######################
-######################
+## 🔗 Links Úteis
+- Laravel Docs: https://laravel.com/docs
+- Vite Docs: https://vitejs.dev/
+
